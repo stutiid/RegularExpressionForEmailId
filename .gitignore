@@ -2,4 +2,4 @@
 .project
 .settings
 *.class
-modulo-info.java
+module-info.java
