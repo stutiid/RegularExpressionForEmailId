@@ -31,7 +31,17 @@ public class UserRegistrationRules {
 			System.out.println("your last name is valid");
 		else
 			System.out.println("please enter a valid last name");
-
+		System.out.println("enter your email");
+		String email = scanner.next();
+		pattern = Pattern.compile(
+				"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$",
+				Pattern.CASE_INSENSITIVE);
+		matcher = pattern.matcher(email);
+		matches = matcher.find();
+		if (matches)
+			System.out.println("your email is valid");
+		else
+			System.out.println("please enter a valid email");
 	}
 
 }
