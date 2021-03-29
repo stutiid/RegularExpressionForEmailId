@@ -20,9 +20,18 @@ public class UserRegistrationRules {
 		Matcher matcher = pattern.matcher(firstName);
 		boolean matches = matcher.find();
 		if (matches)
-			System.out.println("your name is valid");
+			System.out.println("your first name is valid");
 		else
-			System.out.println("please enter a valid name");
+			System.out.println("please enter a valid first name");
+		System.out.println("enter your last name");
+		String lastName = scanner.next();
+		matcher = pattern.matcher(lastName);
+		matches = matcher.find();
+		if (matches)
+			System.out.println("your last name is valid");
+		else
+			System.out.println("please enter a valid last name");
+
 	}
 
 }
