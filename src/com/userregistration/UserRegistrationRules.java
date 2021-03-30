@@ -48,7 +48,7 @@ public class UserRegistrationRules {
 			System.out.println("your email is valid");
 		else
 			System.out.println("Invalid email");
-		
+
 		System.out.println("enter password");
 		String password = scanner.next();
 		pattern = Pattern.compile("[A-Z0-9a-z$%&*@!#]{8,}");
