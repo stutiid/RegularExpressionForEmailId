@@ -14,6 +14,8 @@ public class UserRegistrationRules {
 		System.out.println("welcom to user registration page");
 
 		Scanner scanner = new Scanner(System.in);
+
+		/* Checking validity of first name */
 		System.out.println("enter your first name");
 		String firstName = scanner.next();
 		Pattern pattern = Pattern.compile("[A-Z]{1}[a-z]{2}+");
@@ -23,6 +25,8 @@ public class UserRegistrationRules {
 			System.out.println("your first name is valid");
 		else
 			System.out.println("please enter a valid first name");
+
+		/* Checking validity of last name */
 		System.out.println("enter your last name");
 		String lastName = scanner.next();
 		matcher = pattern.matcher(lastName);
@@ -31,6 +35,8 @@ public class UserRegistrationRules {
 			System.out.println("your last name is valid");
 		else
 			System.out.println("please enter a valid last name");
+
+		/* checking email-id validity */
 		System.out.println("enter your email");
 		String email = scanner.next();
 		pattern = Pattern.compile(
@@ -42,6 +48,16 @@ public class UserRegistrationRules {
 			System.out.println("your email is valid");
 		else
 			System.out.println("please enter a valid email");
-	}
 
+		/* checking validity of mobile number */
+		System.out.println("enter your mobile number");
+		String number =scanner.next();
+		pattern = Pattern.compile("\\\\d{2}[\\\\s]?\\\\d{10}");//("^([1-9]{1,2}[\s]?)?([1-9]{1})[0-9]{9}$");		matcher = pattern.matcher(number);
+		matches = matcher.find();
+		if (matches)
+			System.out.println("your mobile number is valid");
+		else
+			System.out.println("please enter a valid mobile number");
+
+	}
 }
