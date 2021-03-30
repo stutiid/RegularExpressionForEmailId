@@ -47,17 +47,17 @@ public class UserRegistrationRules {
 		if (matches)
 			System.out.println("your email is valid");
 		else
-			System.out.println("please enter a valid email");
-
-		/* checking validity of mobile number */
-		System.out.println("enter your mobile number");
-		String number =scanner.next();
-		pattern = Pattern.compile("\\\\d{2}[\\\\s]?\\\\d{10}");//("^([1-9]{1,2}[\s]?)?([1-9]{1})[0-9]{9}$");		matcher = pattern.matcher(number);
+			System.out.println("Invalid email");
+		
+		System.out.println("enter password");
+		String password = scanner.next();
+		pattern = Pattern.compile("[A-Z0-9a-z$%&*@!#]{8,}");
+		matcher = pattern.matcher(password);
 		matches = matcher.find();
 		if (matches)
-			System.out.println("your mobile number is valid");
+			System.out.println("your password is valid");
 		else
-			System.out.println("please enter a valid mobile number");
+			System.out.println("Invalid password");
 
 	}
 }
