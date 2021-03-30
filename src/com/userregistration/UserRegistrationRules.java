@@ -51,7 +51,7 @@ public class UserRegistrationRules {
 
 		System.out.println("enter password");
 		String password = scanner.next();
-		pattern = Pattern.compile("[A-Z0-9a-z$%&*@!#]{8,}");
+		pattern = Pattern.compile("(?=.*[A-Z])[0-9a-z$%&*@!#]{8,}");
 		matcher = pattern.matcher(password);
 		matches = matcher.find();
 		if (matches)
